@@ -1,0 +1,46 @@
+.blks {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    box-sizing: border-box;
+}
+.blks * {
+    box-sizing: border-box;
+}
+
+.blks-f .blksRotate, .blks-f .blksRotateRev, .blks-f .bgsWrap,
+.blks-l .blksRotate, .blks-l .blksRotateRev, .blks-l .bgsWrap,
+.blks-ll .blksRotate, .blks-ll .blksRotateRev, .blks-ll .bgsWrap {
+    position: absolute;
+    transform-origin: top left;
+    top: 0;
+    left: 0;
+}
+
+.blks-r .blksRotate, .blks-r .blksRotateRev, .blks-r .bgsWrap,
+.blks-lr .blksRotate, .blks-lr .blksRotateRev, .blks-lr .bgsWrap {
+    position: absolute;
+    transform-origin: top right;
+    top: 0;
+    right: 0;
+}
+
+.blksRotate, .blksRotateRev {
+    overflow: hidden;
+}
+
+.blks-f .bgs:hover, .blks-r .bgs:hover, .blks-lr .bgs:hover {
+    transform: scale(1.1) translateY(-1%) translateX(3%);
+}
+
+.blks-l .bgs:hover, .blks-ll .bgs:hover {
+    transform: scale(1.1) translateY(-1%) translateX(-3%);
+}
+
+.bgsWrap > * {
+    transition: all ease 2s;
+    transform-origin: center center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align: center;
+}

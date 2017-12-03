@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>slashBlocks</title>
+    <script
+            src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+    <script src="js/slashBlocksv2.js"></script>
+    <link rel="stylesheet" href="css/slashBlocksv2.css">
+    <style type="text/css">
+        body {
+            margin: 0;
+            background-color: #ccc;
+        }
+
+        .bgs {
+            opacity: 1;
+            font-size: 80px;
+            line-height: 400px;
+            color: #1367bc;
+            transition: all ease 2s;
+            transform-origin: center center;
+        }
+
+        .blks-f .bgs:hover, .blks-r .bgs:hover, .blks-lr .bgs:hover {
+            transform: scale(1.1) translateY(-1%) translateX(3%);
+        }
+
+        .blks-l .bgs:hover, .blks-ll .bgs:hover {
+            transform: scale(1.1) translateY(-1%) translateX(-3%);
+        }
+
+        .bg1{
+            background-color: #ff007f;
+        }
+        .bg2{
+            background-color: #ff8000;
+        }
+        .bg3{
+            background-color: #cccc33;
+        }
+        .bg4{
+            background-color: #00cc66;
+        }
+        .bg5{
+            background-color: #1367bc;
+        }
+        .bg6{
+            background-color: #9933ff;
+        }
+        .bg7{
+            background-color: #ff33ff;
+        }
+
+    </style>
+</head>
+<body>
+<div style="width: 600px; margin:auto; position: relative; background-color: rgba(180,0,0,0)">
+    <div class="slash-blocks">
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+        <div class="bg3"></div>
+        <div class="bg4"></div>
+        <div class="bg5"></div>
+        <div class="bg6"></div>
+        <div class="bg7"></div>
+    </div>
+    <!--<div class="slash-blocks">-->
+        <!--<div class="bgs" style="background-image: url(1.jpg);"></div>-->
+        <!--<div class="bgs" style="background-image: url(2.jpg);"></div>-->
+        <!--<div class="bgs" style="background-image: url(1.jpg);"></div>-->
+        <!--<div class="bgs" style="background-image: url(2.jpg);"></div>-->
+        <!--<div class="bgs" style="background-image: url(1.jpg);"></div>-->
+        <!--<div class="bgs" style="background-image: url(2.jpg);"></div>-->
+    <!--</div>-->
+</body>
+<script>
+    $(function () {
+        $('.slash-blocks').slashBlocks({
+            height: 200,
+            angle: 10,
+            items: ''
+        });
+    })
+</script>
+</html>

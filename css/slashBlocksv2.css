@@ -1,0 +1,89 @@
+.blks {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    box-sizing: border-box;
+}
+
+.blks * {
+    box-sizing: border-box;
+}
+
+.blksRotateOut, .blksRotateRevOut, .blksRotateIn, .blksRotateRevIn, .blksRotateRevIn > * {
+    position: absolute;
+    overflow: hidden;
+}
+
+.blksRotateRevIn > * {
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+/* 第一張 右切 */
+.blks-f .blksRotateOut, .blks-f .blksRotateRevOut, .blks-f .blksRotateIn, .blks-f .blksRotateRevIn, .blks-f .blksRotateRevIn > * {
+    bottom: 0;
+    right: 0;
+    transform-origin: bottom right;
+}
+
+/* 偶數張 右切再左切 */
+.blks-l .blksRotateOut, .blks-l .blksRotateRevOut {
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+}
+
+.blks-l .blksRotateIn, .blks-l .blksRotateRevIn, .blks-l .blksRotateRevIn > * {
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom left;
+}
+
+/* 奇數張 左切再右切 */
+.blks-r .blksRotateOut, .blks-r .blksRotateRevOut {
+    top: 0;
+    right: 0;
+    transform-origin: top right;
+}
+
+.blks-r .blksRotateIn, .blks-r .blksRotateRevIn, .blks-r .blksRotateRevIn > * {
+    bottom: 0;
+    right: 0;
+    transform-origin: bottom right;
+}
+
+/* 最後一張 右切 */
+.blks-ll .blksRotateOut, .blks-ll .blksRotateRevOut, .blks-ll .blksRotateIn, .blks-ll .blksRotateRevIn, .blks-ll .blksRotateRevIn > * {
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+}
+
+/* 最後一張 左切 */
+.blks-lr .blksRotateOut, .blks-lr .blksRotateRevOut, .blks-lr .blksRotateIn, .blks-lr .blksRotateRevIn, .blks-lr .blksRotateRevIn > * {
+    top: 0;
+    right: 0;
+    transform-origin: top right;
+}
+
+.blksRotateOut, .blksRotateRevOut, .blksRotateIn, .blksRotateRevIn {
+    overflow: hidden;
+}
+
+/*.blksRotateOut {*/
+    /*background-color: rgba(0,0,180,.5);*/
+/*}*/
+
+/*.blksRotateRevOut {*/
+    /*background-color: rgba(180,180,0,.5);*/
+/*}*/
+
+/*.blksRotateIn {*/
+    /*background-color: rgba(180,0,180,.5);*/
+/*}*/
+
+/*.blksRotateRevIn {*/
+    /*background-color: rgba(0,180,0,.5);*/
+/*}*/
+
